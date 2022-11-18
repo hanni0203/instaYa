@@ -1,0 +1,35 @@
+
+.footer{
+
+    display:auto;
+    min-width: 1280px;
+    width: 100%;
+    height: auto;
+    padding: 0;
+   
+}
+
+body{
+    display: block;
+}
+
+.caja1{
+
+    width: 80%;
+    display: flex;
+}
+.caja2{
+
+    width: 20%;
+    display: flex;
+}
+.caja3{
+
+    width: 20%;
+    display: flex;
+}
+.caja4{
+
+    width: 20%;
+    display: flex;
+}
