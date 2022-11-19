@@ -3,6 +3,7 @@ import  '../assets/css/footer.css'
 
 export default function Registro() {
   return (
+<<<<<<< HEAD:src/componentes/registro.jsx
     <>
       <div className='texto__crea-tucuenta'>
         <label htmlFor=""><h3>Crea Tu Cuenta</h3> </label>
@@ -56,6 +57,10 @@ export default function Registro() {
       
       
       </div>
+=======
+    <div>
+        registro este es
+>>>>>>> f9e2513e2e054e75e55d77c5f697f3553c1fa948:src/components/Registro.jsx
         
     </from>
     </>
