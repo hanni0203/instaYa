@@ -1,0 +1,29 @@
+
+.registro{
+    
+}
+
+.texto__crea-tucuenta{
+    display: inline-flex;
+    
+}
+
+.formulario{
+    width: 20vw;
+    height: 20vh;
+    display: inline-block;
+
+    
+   
+}
+.nombre{
+    display: inline;
+    
+}
+.nombre label{
+    display: table-row-group;
+}
+.nombre input{
+    display: table-row-group;
+
+}
