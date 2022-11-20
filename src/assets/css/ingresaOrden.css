@@ -1,0 +1,55 @@
+.ingresaOrden {
+    display: flex;
+    gap: 10px;
+}
+
+
+.tituloIngresaOrden {
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    gap: 100px;
+    color: #0b6eca;
+}
+
+.tituloIngresaOrden img {
+    width: 225px;
+}
+
+.envia{
+    background-color: #EE8741;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 70px;
+    border-radius: 18px;
+    padding: 20px;
+}
+
+.encomienda{
+    background-color: #A5A5A5;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 70px;
+    border-radius: 18px;
+    padding: 20px;
+}
+
+.recibe{
+    background-color:#FFC000;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 70px;
+    border-radius: 18px;
+    padding: 20px;
+}
+
+.dimensiones {
+    display: flex;
+    flex-direction: column;
+}

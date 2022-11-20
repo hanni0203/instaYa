@@ -8,6 +8,7 @@ export default function Registro() {
         <div><h1>Crea tu cuenta</h1></div>
         <div><img src="src/assets/img/imagenRegistro.png" alt=""    align= "right"/></div>
       </div> 
+      <br/>
       <form action="" className='registro'>
         <div className='nombreycorreo'>
           <label>Nombre completo</label>
