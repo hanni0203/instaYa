@@ -1,8 +1,9 @@
 .ingresaOrden {
     display: flex;
     gap: 10px;
+    height: 370px;
+    margin-bottom: 30px;
 }
-
 
 .tituloIngresaOrden {
     display: flex;
@@ -16,6 +17,7 @@
     width: 225px;
 }
 
+
 .envia{
     background-color: #EE8741;
     width: 50%;
@@ -25,6 +27,8 @@
     margin-bottom: 70px;
     border-radius: 18px;
     padding: 20px;
+    height: 100%;
+
 }
 
 .encomienda{
@@ -36,6 +40,7 @@
     margin-bottom: 70px;
     border-radius: 18px;
     padding: 20px;
+    height: 100%;
 }
 
 .recibe{
@@ -47,9 +52,141 @@
     margin-bottom: 70px;
     border-radius: 18px;
     padding: 20px;
+    height: 100%;
+
+}
+
+.info{
+    display: flex;
 }
 
 .dimensiones {
     display: flex;
     flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
+.div1, .div2{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 5px;
+}
+
+select{
+    height: 29px;
+}
+
+label{
+    text-align: left;
+}
+
+input, select{
+    border-radius: 6px;
+}
+
+.div3{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-right: 5px;
+}
+
+.div4{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.div4 input{
+    width: 100px;
+}
+
+.title{
+    text-align: left;
+    font-weight: 700;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.medidas{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.divlabel1, .divlabel2{
+    width: 60%;
+}
+
+.divlabel1{
+    margin-right: 5px;
+}
+
+.divinput input{
+    width: 100%;
+}
+
+.tipo{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.radiobtn1 input{
+    margin-right: 7px;
+}
+
+.btn-container{
+    width: 40%;
+    background-color: white;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    
+}
+
+.btn{
+    width: 100%;
+    
+}
+
+.rastreo{
+    width: 20%;
+    height: 300px;
+    margin: auto;
+}
+.circle{
+    border: none;
+    border-radius: 50%;
+    background-color:#217BCF ;
+    width: 100%;
+    height: 250px;
+}
+
+.circleinput{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+}
+
+.imgcheck{
+    width: 140px;
+    margin: auto;
+}
+
+.titulos{
+    color: white;
+    font-weight: 800;
+}
+
+.circleinput input{
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
