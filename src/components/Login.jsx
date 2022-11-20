@@ -1,4 +1,6 @@
 import React from 'react'
+import '../assets/css/login.css'
+
 export default function Login() {
   return (
      <form className='formularioingresar'>

@@ -1,63 +1,65 @@
 import React from 'react'
-import  '../assets/css/footer.css'
+import '../assets/css/formularioregistro.css'
 
 export default function Registro() {
   return (
-    <>
-      <div className='texto__crea-tucuenta'>
-        <label htmlFor=""><h3>Crea Tu Cuenta</h3> </label>
-        <img src="src/assets/img/imagenRegistro.png" alt="" />
-      </div>
- 
-     <from className ='registro'>
-      <div className='formulario'>
-        <div className='nombre'>
+    <div>
+      <div className='tituloFormRegistro'>
+        <div><h1>Crea tu cuenta</h1></div>
+        <div><img src="src/assets/img/imagenRegistro.png" alt=""    align= "right"/></div>
+      </div> 
+      <form action="" className='registro'>
+        <div className='nombreycorreo'>
+          <label>Nombre completo</label>
+          <input type= 'text'/>
+        </div>
+        <div className='info'>
           <div>
-          <label htmlFor="">Nombre Completo </label>
+            <label for="lang">CC/NIT:</label>
+            <select name="Identificacion" id="lang">
+            <option value="Selecciona">Selecciona:</option>
+            <option value="cc.">CC.</option>
+            <option value="nit">NIT</option>
+            </select>
           </div>
           <div>
-          <input type="text" />
+            <label htmlFor="">Numero de Identificacion</label>
+            <input type="text" />
+          </div>
+          <div>
+            <label htmlFor="">Telefono de Contacto</label>
+            <input type="text" />
           </div>
         </div>
-           
+        <div className='nombreycorreo'>
+            <label htmlFor="">Correo Electronico</label>
+            <input type="email" name="correo" id="correo" />
+        </div>
+        <div className='contrasenia' >
+            <div className='groupusu'>
+              <div className='contraseniainput'><label htmlFor="">Crea Tu Usuario</label></div>
+              <div className='contraseniainput'><input type="text" /></div>
+            </div>
+            <div className='groupusu'>
+              <div className='contraseniainput'><label htmlFor="">Crea Tu Contraseña</label></div>
+              <div className='contraseniainput'><input type="password" /></div>
+            </div>
+            <div className='groupusu'>
+              <div className='contraseniainput'><label htmlFor="">Confirma tu Contraseña</label></div>
+              <div className='contraseniainput'><input type="password" /></div>
+            </div>            
+        </div>
         <div>
-          <label for="lang">CC/NIT:</label>
-          <select name="Identificacion" id="lang">
-          <option value="Selecciona">Selecciona:</option>
-          <option value="cc.">CC.</option>
-          <option value="nit">NIT</option>
-          </select>
-          <label htmlFor="">Numero de Identificacion</label>
-          <input type="text" />
-          <label htmlFor="">Telefono de Contacto</label>
-              <input type="text" />
-            </div>
-          <div className='correo'>
-              <label htmlFor="">Correo Electronico</label>
-              <input type="email" name="correo" id="correo" />
-          </div>
-          
-          <div className='contraseña' >
-            <label htmlFor="">Crea Tu Usuario</label>
-            <input type="text" />
-            <label htmlFor="">Crea Tu Contraseña</label>
-            <input type="password" />
-            <label htmlFor="">Confirma tu Contraseña</label>
-            <input type="password" />
-          </div>
+          <input type="radio" />
+          <label htmlFor="">Acepto términos y condiciones vigentes de la política de privacidad.</label>
+        </div>
+        <div>
+          <button type="submit">Registrarme</button>
+        </div>
+    
 
-            <div>
-              <input type="radio" />
-              <label htmlFor="">Acepto términos y condiciones vigentes de la política de privacidad.</label>
-            </div>
-            <div>
-              <button type="submit">Registrarme</button>
-            </div>
-      
-      
-      </div>
-        
-    </from>
-    </>
+
+      </form>
+    </div>
   )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 export default function NavBar() {
   return (
     <div className='NavBar'>
@@ -81,8 +82,7 @@ export default function NavBar() {
       <a className="btn-getstarted scrollto" href="index.html#about">Registrate</a>
 
     </div>
-    </header>{/*<!-- End Header -->*/}
- 
+    </header>{/*<!-- End Header -->*/} 
         
     </div>
   )
