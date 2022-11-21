@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
@@ -12,17 +13,23 @@ export default function Home() {
 
       <div className='contac'>
         <div className="item">
-          <img  src="src/assets/img/pc1.png" alt=" imagen logo" />
-          <h4>Regístrate</h4>
+          <Link to="/register">
+            <img  src="src/assets/img/pc1.png" alt=" imagen logo" />
+            <h4>Regístrate</h4>
+          </Link>
         </div>
-        <div className="item">
-          <img src="src/assets/img/carro2.png" alt=" imagen logo" />
-          <h4>Ingresa una Orden</h4>
-        </div>
-        <div className="item">
-          <img src="src/assets/img/nota3.png" alt=" imagen logo" />
-          <h4>Listado de Ordenes</h4>
-        </div>
+        <Link to="/ingresaorden">
+          <div className="item">
+            <img src="src/assets/img/carro2.png" alt=" imagen logo" />
+            <h4>Ingresa una Orden</h4>
+          </div>
+        </Link>
+        <Link to="/misordenes">
+          <div className="item">
+            <img src="src/assets/img/nota3.png" alt=" imagen logo" />
+            <h4>Listado de Ordenes</h4>
+          </div>
+        </Link>
         <div className="item">
           <img  src="src/assets/img/rastreo4.png" alt=" imagen logo" />
           <h4>Rastrea una Orden</h4>

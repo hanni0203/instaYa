@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 export default function NavBar() {
@@ -8,11 +9,11 @@ export default function NavBar() {
       <header id="header" className="header fixed-top" data-scrollto-offset="0">
         <div className="container-fluid d-flex align-items-center justify-content-between">
 
-      <a href="index.html" className="logo d-flex align-items-center scrollto me-auto me-lg-0">
+      <Link to="/" className="logo d-flex align-items-center scrollto me-auto me-lg-0">
         {/*<!-- Uncomment the line below if you also wish to use an image logo -->*/}
          <img style={{ width: 250, height: 250}} src="src/assets/img/imagenlogo.jpg" alt=" imagen logo" />
         {/* <h1>HeroBiz<span>.</span></h1> */}
-      </a>
+      </Link>
 
       <nav id="navbar" className="navbar">
         <ul>
@@ -26,12 +27,11 @@ export default function NavBar() {
             </ul>
           </li>
         */}
-
-          <li><a className="nav-link scrollto" href="index.html#about">Inicio</a></li>
-          <li><a className="nav-link scrollto" href="index.html#services">Servicio</a></li>
-          <li><a className="nav-link scrollto" href="index.html#portfolio">Tarifas</a></li>
-          <li><a className="nav-link scrollto" href="index.html#team">Rastreo</a></li>
-          <li><a href="blog.html">Contactanos</a></li>
+          <Link to="/" className="nav-link scrollto">Inicio</Link>
+          <li><Link className="nav-link scrollto" to="">Servicios</Link></li>
+          <li><Link className="nav-link scrollto" to="">Tarifas</Link></li>
+          <li><Link className="nav-link scrollto" to="">Rastreo</Link></li>
+          <li><Link className="nav-link scrollto" to="">Contáctanos</Link></li>
          {/*  <li className="dropdown megamenu"><a href="#"><span>Mega Menu</span> <i className="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li>
@@ -78,8 +78,8 @@ export default function NavBar() {
         {/* <i className="bi bi-list mobile-nav-toggle d-none"></i> */}
       </nav>{/*<!-- .navbar -->*/}
 
-      <a className="btn-getstarted scrollto" href="index.html#about">Mi Cuenta</a>
-      <a className="btn-getstarted scrollto" href="index.html#about">Registrate</a>
+      <Link className="btn-getstarted scrollto" to="/login">Mi Cuenta</Link>
+      <Link className="btn-getstarted scrollto" to="/register">Registrate</Link>
 
     </div>
     </header>{/*<!-- End Header -->*/} 
