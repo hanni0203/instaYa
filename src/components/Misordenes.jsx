@@ -58,7 +58,7 @@ export default function titulomisordenes () {
                     <div className='nombreorden'>
                         
                         
-                        <div className='envia'>
+                        <div className='datos'>
                             
                             <div className='nombreycorreo'>
                                 <label>Nombre completo:</label>
@@ -165,15 +165,15 @@ export default function titulomisordenes () {
                                     <div className='divlabel2'><label htmlFor="">kg</label></div>
                                 </div>
 
-                                <div className='tipo'>
+                                <div className='tiporadio'>
                                     <div className='titulo'>
                                         <label htmlFor="">Delicado:</label>
                                     </div>
-                                    <div className='radiobtn1'>
+                                    <div className='radiobtn2'>
                                         <input type="radio" id="si" name="fav_language" value="si"/>
                                         <label for="si">Si</label><br/>
                                     </div>
-                                    <div className='radiobtn1'>
+                                    <div className='radiobtn2'>
                                         <input type="radio" id="no" name="fav_language" value="no"/>
                                         <label for="no">No</label><br/>
                                     </div>
@@ -184,7 +184,7 @@ export default function titulomisordenes () {
 
                         <div className='tipocantidadestado'>
                             <div >
-                                <label htmlFor="">Tipo de Encomineda</label>
+                                <label htmlFor="">Tipo de Encomienda</label>
                                 <input type="text" />
                             </div>
                             <div>

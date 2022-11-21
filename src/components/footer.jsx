@@ -47,7 +47,7 @@ export default function Footer() {
                             <h4>Suscribete</h4>
                             <p>Recibe informacion en nuestros canales digitales </p>
                             <form action="" method="post">
-                                <input type="email" name="email"/><input type="submit" value="Subscribe"/>
+                                <input type="email" name="email"/><input type="submit" value="Suscribete"/>
                             </form>
 
                         </div>

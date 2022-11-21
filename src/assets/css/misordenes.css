@@ -95,7 +95,7 @@
     margin-bottom: 0;
 }
 
-.envia{
+.datos{
 
     width: 80%;
     display: flex;
@@ -146,15 +146,16 @@ input, select{
 }
 
 
-.tipo{
+.tiporadio{
     display: flex;
     margin: auto;
     width: 100%;
-    gap: 12px;
+    gap: 25px;
     margin-top: 30px;
+   
 }
 
-.radiobtn1 input{
+.radiobtn2 input{
     margin-right: 7px;
 }
 .titulomisordenes{

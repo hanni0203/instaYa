@@ -2,12 +2,13 @@
 .footer{
 
     display:auto;
-    /* min-width: 1280px; */
+    min-width: 1218px;
     width: 100%;
     height: auto;
     padding: 0;
    
 }
+
 
 body{
     display: block;
@@ -20,16 +21,17 @@ body{
 }
 .caja2{
 
-    width: 20%;
+    
     display: flex;
 }
 .caja3{
 
-    width: 20%;
+   
     display: flex;
 }
 .caja4{
 
-    width: 20%;
+    
     display: flex;
 }
+

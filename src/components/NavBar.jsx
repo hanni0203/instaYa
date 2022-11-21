@@ -31,7 +31,7 @@ export default function NavBar() {
           <li><a className="nav-link scrollto" href="index.html#services">Servicio</a></li>
           <li><a className="nav-link scrollto" href="index.html#portfolio">Tarifas</a></li>
           <li><a className="nav-link scrollto" href="index.html#team">Rastreo</a></li>
-          <li><a href="blog.html">Contacto</a></li>
+          <li><a href="blog.html">Contactanos</a></li>
          {/*  <li className="dropdown megamenu"><a href="#"><span>Mega Menu</span> <i className="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li>
