@@ -119,11 +119,8 @@ export default function IngresaOrden() {
                     <label for="no">No</label><br/>
                   </div>
                 </div>
-
               </div>
-
             </div>
-
             <div className='recibe'>
               <h3 className='titulos'>Quien recibe?</h3>
               <div className='nombreycorreo'>
@@ -166,9 +163,7 @@ export default function IngresaOrden() {
               <div className='btn-container'>
                 <button className='btn' type='submit'>Ingresar</button>
               </div>
-
             </div>
-
             
         </form>
         <div className='rastreo'>

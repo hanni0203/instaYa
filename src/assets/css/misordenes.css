@@ -1,0 +1,166 @@
+.ordenescodigo{
+    
+    display: flex;
+    min-height:min-content;
+    margin: 50px 0px 50px 0px;
+    width: 100%;
+    
+    
+}
+
+.table{
+    
+    min-height:min-content;
+    display: block;
+    margin:0%;
+    width: 20%;
+   
+   
+}
+.contenedororden{
+
+    min-height:min-content;
+    display: block;
+    font-size: 16px;
+    display: table-cell;
+    background-color: #217BCF;
+    width: 1500px;
+    border-radius: 5%;
+
+}
+
+.nomdirec {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.nombreorden{
+    min-height:min-content;
+ 
+    background-color:  #217BCF;
+    display: flex;
+
+
+}
+.datosorden{
+
+    min-height:min-content;
+    background-color: #217BCF;
+    display: table-cell
+
+}
+.dimensiones {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
+.medidas{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    width: 100%;
+    
+}
+
+.divlabel1, .divlabel2{
+    width: 60%;
+}
+
+.divlabel1{
+    margin-right: 5px;
+}
+
+.divinput input{
+    width: 100%;
+}
+
+.tipocantidadestado{
+
+    display: flex;
+    margin: 5px 0px 5px 0px;
+}
+.ciudadtelefono{
+    display: flex;
+  
+}
+
+.title{
+    text-align: left;
+    font-weight: 700;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.envia{
+
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 70px;
+    border-radius: 18px;
+    padding: 20px;
+    height: 100%;
+
+}
+.info{
+    display: flex;
+}
+
+.div1, .div2{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 5px;
+}
+
+select{
+    height: 29px;
+}
+
+label{
+    text-align: left;
+}
+
+input, select{
+    border-radius: 6px;
+}
+
+.btn{
+    width: 100%;
+    
+}
+
+.contenedororden .btn{
+    color: #217BC0 ;
+   
+}
+.tituloFormorden{
+    color: #e9edf0 ;
+    margin: 5px 0px 5px 0px;
+
+}
+
+
+.tipo{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.radiobtn1 input{
+    margin-right: 7px;
+}
+.titulomisordenes{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    color:#217BC0 ;
+}

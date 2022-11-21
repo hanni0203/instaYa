@@ -7,6 +7,7 @@ import Home from './components/Home'
 import Registro from './components/Registro'
 import Login from './components/Login'
 import IngresaOrden from './components/IngresaOrden'
+import Misordenes from './components/Misordenes'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/login" element={<Login />} />  
           <Route path="/register" element={<Registro />} />
           <Route path="/ingresaOrden" element={<IngresaOrden />} />    
+          <Route path="/misOrdenes" element={<Misordenes />} />    
         </Routes>
         <Footer/>
       </BrowserRouter>
