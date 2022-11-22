@@ -12,11 +12,16 @@ label{
 .formularioingresar{
     background-color: #EE8741;
     width: 50%;
+    height: 150%;
+  
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 20%;
     margin-bottom: 70px;
     border-radius: 18px;
+
+    position: relative;
+    padding-top: 15%;
 }
 
 .fromlogin{
@@ -57,3 +62,10 @@ label{
 }
 
 
+.iimg{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: -50%;
+    left: 25%;
+}

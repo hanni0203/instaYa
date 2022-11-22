@@ -4,9 +4,9 @@ import '../assets/css/login.css'
 export default function Login() {
   return (
      <form className='formularioingresar'>
-      <div>
-        <img src="../src/assets/img/login.png" alt="" />
-      </div>
+      
+        <img className='iimg' src="../src/assets/img/login.png" alt="" />
+     
 
        <div className='fromlogin'>
           <div className='container'>
