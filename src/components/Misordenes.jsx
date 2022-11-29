@@ -1,13 +1,19 @@
 import React from 'react'
 import '../assets/css/misordenes.css'
 
+import { useParams } from "react-router-dom"
+import { Link } from 'react-router-dom'
+
 export default function titulomisordenes () {
+    const { id } = useParams()
+
+
     return (
 
         <div className='principal'>
             <div className='titulomisordenes'>
                 <div>
-                <h1> Mis Ordenes</h1>
+                <h1> #{id} Mis Ordenes</h1>
                 </div>
 
                 <div>
@@ -37,7 +43,7 @@ export default function titulomisordenes () {
                         </tr>
 
                         <tr>
-                            <th scope="row">2</th>
+                            <th scope="row">1</th>
                             <td>Jacob</td>
                             <td>Thornton</td>
                             <td>@fat</td>
@@ -46,6 +52,12 @@ export default function titulomisordenes () {
                         </tr>
                       
                     </tbody>
+
+                    <div className='botonestabla'>                    
+                       <button><Link to="/ingresaorden">Ingresar Orden</Link> </button>  
+                       
+                    </div>
+
                 </table>
 
               

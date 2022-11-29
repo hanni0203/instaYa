@@ -28,10 +28,10 @@ export default function NavBar() {
           </li>
         */}
           <Link to="/" className="nav-link scrollto">Inicio</Link>
-          <li><Link className="nav-link scrollto" to="">Servicios</Link></li>
-          <li><Link className="nav-link scrollto" to="">Tarifas</Link></li>
-          <li><Link className="nav-link scrollto" to="">Rastreo</Link></li>
-          <li><Link className="nav-link scrollto" to="">Contáctanos</Link></li>
+              <li><Link className="nav-link scrollto" to="">Servicios</Link></li>
+              <li><Link className="nav-link scrollto" to="">Tarifas</Link></li>
+              <li><Link className="nav-link scrollto" to="">Rastreo</Link></li>
+              <li><Link className="nav-link scrollto" to="">Contáctanos</Link></li>
          {/*  <li className="dropdown megamenu"><a href="#"><span>Mega Menu</span> <i className="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li>

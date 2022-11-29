@@ -1,27 +1,45 @@
 import React from 'react'
 import '../assets/css/login.css'
+import {useForm} from 'react-hook-form'
 
 export default function Login() {
+
+  const { register, formState: { errors }, handleSubmit } = useForm();
+  const customSubmit = (data) => { console.log('login data', data) }
+
+
+
+
   return (
-     <form className='formularioingresar'>
+
+     <form className='formularioingresar' onSubmit={handleSubmit(customSubmit)}>
+        <div>
+          <img className='iimg' src="../src/assets/img/login.png" alt="" />
+        </div>
       
-        <img className='iimg' src="../src/assets/img/login.png" alt="" />
-     
 
        <div className='fromlogin'>
           <div className='container'>
-            <label htmlFor="">Digita tu usuario: </label> 
+            <label  htmlFor="">Usuario: </label> 
           </div>
           <div className='container'>
-            <input type="text" />
+            <input type="text" placeholder='ingresa tu Usuario' 
+            {...register("usuario", { required: true, maxLength: 10 })}
+            aria-onInvalid={errors.usuario ? "true" : "falso"}
+            />
+
+          
           </div>
         </div> 
         <div className='fromlogin'>
           <div className='container'>
-            <label htmlFor="">Digita tu contraseña:</label> 
+            <label htmlFor="">Contraseña:</label> 
           </div>
           <div className='container'>
-            <input type="password" /><i class="fa-thin fa-eye"></i>
+            <input type="password" placeholder='ingresa tu contraseña' 
+            {...register("password", { required: true, maxLength: 10 })}
+            aria-onInvalid={errors.password  ? "true" : "falso"}
+            />
           </div>
         </div> 
          <div className='olvido'>

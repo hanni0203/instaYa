@@ -18,13 +18,14 @@ function App() {
     <div className='instaYa'>
       <BrowserRouter>
         <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />  
-          <Route path="/login" element={<Login />} />  
-          <Route path="/register" element={<Registro />} />
-          <Route path="/ingresaOrden" element={<IngresaOrden />} />    
-          <Route path="/misOrdenes" element={<Misordenes />} />    
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />  
+            <Route path="/login" element={<Login />} />  
+            <Route path="/register" element={<Registro />} />
+            <Route path="/ingresaOrden" element={<IngresaOrden />} />    
+            <Route path="/misOrdenes" element={<Misordenes />} /> 
+              
+          </Routes>
         <Footer/>
       </BrowserRouter>
     </div>
