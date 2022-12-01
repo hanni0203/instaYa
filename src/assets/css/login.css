@@ -28,13 +28,13 @@ label{
     display: flex;
     gap: 5px;
     /* background-color: black; */
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     
 }
 
 .container{
     /* background-color: rgb(105, 30, 217); */
-    display: flex;
+    display: block;
     text-align: left;
     
 }
@@ -66,6 +66,11 @@ label{
     position: absolute;
     width: 50%;
     height: 100%;
-    top: -50%;
+    top: -60%;
     left: 25%;
+}
+
+p{
+    color: #060de9;
+    font-weight: 600;
 }
