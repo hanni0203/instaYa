@@ -8,6 +8,7 @@ const Orden=({data, idOrden})=> {
   const { register, formState: { errors }, handleSubmit, setValue } = useForm();
 
   const customSubmit = (dataForm) => { 
+        console.log(dataForm)
         const ordenObject = {
           // datos api y datos input 
           
@@ -39,23 +40,23 @@ const Orden=({data, idOrden})=> {
         }
         if(isEdit){
             axios
-              .put('http://localhost:3001/Orden/' + idOrden, ordenObject )
-              .then(response =>{console.log(response.data.data)
+              .put('http://localhost:3001/Orden/edit/' + idOrden, ordenObject )
+              .then(response =>{console.log(response.data)
               })
             
           }else{
             axios
               .post("http://localhost:3001/Orden/", ordenObject)
-              .then(response => console.log(response.data.data))
+              .then(response => console.log(response.data))
           }
-          console.log('datos formulario', data.data) 
+          console.log('datos formulario', data) 
     }
 
     const [isEdit, setisEdit] = useState(false)
 
     useEffect(()=>{
-      console.log(data.data)
-      if(data.data.length !== 0){
+      console.log(data)
+      if(data.length !== 0){
         setisEdit(true)
         //Datos input y datos api
         // emisor  
@@ -109,7 +110,7 @@ const Orden=({data, idOrden})=> {
               <div className='info'>
                 <div className='div1'>
                   <label htmlFor="tipo">CC/NIT:</label>
-                  <select name="Identificacion" id="lang" 
+                  <select select name="Identificacion" id="lang"
                       {...register("tipo", { required: true })}
                       aria-invalid={errors.tipo ? "true" : "false"}
                     >

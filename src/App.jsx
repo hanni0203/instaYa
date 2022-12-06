@@ -27,7 +27,7 @@ function App() {
             <Route path="/IngresaOrden" element={<IngresaOrden />} />
 
             <Route path="/actualizarOrden/:id/edit" element={<ActualizarOrden />} />  
-
+          
             <Route path="/misOrdenes" element={<Misordenes />} /> 
               
           </Routes>

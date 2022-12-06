@@ -14,6 +14,7 @@ const labels = [
 const  Misordenes = () => {
 
     const [ordenes, setOrdenes] = useState(null)
+   
     useEffect(()=>{
         const userId = "638c034c72354a46ce9f1df6"
         axios.get('http://localhost:3001/orden?userId=' + userId)
@@ -21,8 +22,7 @@ const  Misordenes = () => {
                 console.log(response.data.data)
                 setOrdenes(response.data.data)
         })
-    }, [])
-
+    },[]);
 
 
     return (
