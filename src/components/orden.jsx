@@ -39,13 +39,13 @@ const Orden=({data, idOrden})=> {
         }
         if(isEdit){
             axios
-              .put('http://localhost:3001/Orden/' + idOrden, ordenObject )
+              .put('https://instaya-backend-production.up.railway.app/Orden/' + idOrden, ordenObject )
               .then(response =>{console.log(response.data.data)
               })
             
           }else{
             axios
-              .post("http://localhost:3001/Orden/", ordenObject)
+              .post("https://instaya-backend-production.up.railway.app/Orden/", ordenObject)
               .then(response => console.log(response.data.data))
           }
           console.log('datos formulario', data.data) 
