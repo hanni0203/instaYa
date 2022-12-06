@@ -3,4 +3,5 @@ WORKDIR /app
 COPY package.json .
 RUN npm install
 COPY . .
-CMD ["npm", "run",  "dev", "--", "--port", "$PORT"]
+ENV PORT $PORT
+CMD ["npm", "run",  "start"]

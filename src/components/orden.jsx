@@ -41,10 +41,14 @@ const Orden=({data, idOrden})=> {
         if(isEdit){
             axios
 <<<<<<< HEAD
+<<<<<<< HEAD
               .put('http://localhost:3001/Orden/edit/' + idOrden, ordenObject )
               .then(response =>{console.log(response.data)
 =======
               .put('https://instaya-backend-production.up.railway.app/Orden/' + idOrden, ordenObject )
+=======
+              .put('https://instaya-backend-production.up.railway.app/Orden/edit' + idOrden, ordenObject )
+>>>>>>> ef219772a338620c89efc24cc270984ee1d44b73
               .then(response =>{console.log(response.data.data)
 >>>>>>> c435e9f5d0fe0148dff2c41486a98d4f0cc7bcac
               })
