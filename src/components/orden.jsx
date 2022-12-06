@@ -39,7 +39,7 @@ const Orden=({data, idOrden})=> {
         }
         if(isEdit){
             axios
-              .put('https://instaya-backend-production.up.railway.app/Orden/' + idOrden, ordenObject )
+              .put('https://instaya-backend-production.up.railway.app/Orden/edit' + idOrden, ordenObject )
               .then(response =>{console.log(response.data.data)
               })
             
