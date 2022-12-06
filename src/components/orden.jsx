@@ -40,14 +40,24 @@ const Orden=({data, idOrden})=> {
         }
         if(isEdit){
             axios
+<<<<<<< HEAD
               .put('http://localhost:3001/Orden/edit/' + idOrden, ordenObject )
               .then(response =>{console.log(response.data)
+=======
+              .put('https://instaya-backend-production.up.railway.app/Orden/' + idOrden, ordenObject )
+              .then(response =>{console.log(response.data.data)
+>>>>>>> c435e9f5d0fe0148dff2c41486a98d4f0cc7bcac
               })
             
           }else{
             axios
+<<<<<<< HEAD
               .post("http://localhost:3001/Orden/", ordenObject)
               .then(response => console.log(response.data))
+=======
+              .post("https://instaya-backend-production.up.railway.app/Orden/", ordenObject)
+              .then(response => console.log(response.data.data))
+>>>>>>> c435e9f5d0fe0148dff2c41486a98d4f0cc7bcac
           }
           console.log('datos formulario', data) 
     }
