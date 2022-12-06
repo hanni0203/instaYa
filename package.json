@@ -9,17 +9,24 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.2.0",
     "bootstrap": "^5.2.2",
+    "date-format": "^4.0.14",
+    "dateformat": "^5.0.3",
+    "hook-js": "^2.2.0",
     "mdb-react-ui-kit": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.39.6",
-    "react-router-dom": "^6.4.3"
+    "react-hooks": "^1.0.1",
+    "react-router-dom": "^6.4.4",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
-    "vite": "^3.2.3"
+    "vite": "^3.2.3",
+    "vite-plugin-babel": "^1.1.2"
   }
 }
