@@ -40,37 +40,23 @@ const Orden=({data, idOrden})=> {
         }
         if(isEdit){
             axios
-<<<<<<< HEAD
-<<<<<<< HEAD
-              .put('http://localhost:3001/Orden/edit/' + idOrden, ordenObject )
-              .then(response =>{console.log(response.data)
-=======
-              .put('https://instaya-backend-production.up.railway.app/Orden/' + idOrden, ordenObject )
-=======
-              .put('https://instaya-backend-production.up.railway.app/Orden/edit' + idOrden, ordenObject )
->>>>>>> ef219772a338620c89efc24cc270984ee1d44b73
+              .put('http://localhost:4000/Orden/edit/' + idOrden, ordenObject )
               .then(response =>{console.log(response.data.data)
->>>>>>> c435e9f5d0fe0148dff2c41486a98d4f0cc7bcac
-              })
-            
-          }else{
+
+          })
+        }else{
             axios
-<<<<<<< HEAD
-              .post("http://localhost:3001/Orden/", ordenObject)
-              .then(response => console.log(response.data))
-=======
-              .post("https://instaya-backend-production.up.railway.app/Orden/", ordenObject)
+              .post("http://localhost:4000/Orden/", ordenObject)
               .then(response => console.log(response.data.data))
->>>>>>> c435e9f5d0fe0148dff2c41486a98d4f0cc7bcac
-          }
-          console.log('datos formulario', data) 
+
+          console.log('datos formulario', data.data) 
     }
 
     const [isEdit, setisEdit] = useState(false)
 
     useEffect(()=>{
-      console.log(data)
-      if(data.length !== 0){
+      console.log(data.data)
+      if(data.data.length !== 0){
         setisEdit(true)
         //Datos input y datos api
         // emisor  
@@ -368,5 +354,6 @@ const Orden=({data, idOrden})=> {
 
     </div>
   )
+}
 }
 export default Orden

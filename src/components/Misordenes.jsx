@@ -17,7 +17,7 @@ const  Misordenes = () => {
    
     useEffect(()=>{
         const userId = "638c034c72354a46ce9f1df6"
-        axios.get('https://instaya-backend-production.up.railway.app/orden?userId=' + userId)
+        axios.get('http://localhost:4000//Orden/orden?userId=' + userId)
             .then((response) =>{
                 console.log(response.data.data)
                 setOrdenes(response.data.data)

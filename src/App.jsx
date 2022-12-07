@@ -11,10 +11,11 @@ import Orden from './components/Orden'
 import ActualizarOrden from './components/ActualizarOrden'
 import Misordenes from './components/Misordenes'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// ************ Set the server to listen ************
 
 
 function App() {
-  /* const [count, setCount] = useState(0) */
+
 
   return (
     <div className='instaYa'>
@@ -36,5 +37,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App
