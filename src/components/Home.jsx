@@ -18,7 +18,7 @@ export default function Home() {
             <h4>Regístrate</h4>
           </Link>
         </div>
-        <Link to="/ingresaorden">
+        <Link to="/IngresaOrden">
           <div className="item">
             <img src="src/assets/img/carro2.png" alt=" imagen logo" />
             <h4>Ingresa una Orden</h4>

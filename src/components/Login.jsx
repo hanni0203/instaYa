@@ -2,11 +2,32 @@
 import '../assets/css/login.css'
 import {useForm} from 'react-hook-form'
 import { useState } from 'react'
+import axios from 'axios'
 
 export default function Login() {
 
-  const { register, formState: { errors }, handleSubmit } = useForm();
-  const customSubmit = (data) =>{ console.log(data)}
+  //const { register, formState: { errors }, handleSubmit } = useForm();
+  //const customSubmit = (data) =>{ console.log(data)}
+
+
+    state={
+      form:{
+          username: '',
+          password: '',
+      }
+    }
+    handleChange=async e=>{
+      await this.setState({
+        form:{
+            ...this.state.form,
+            [e.target.name]: e.target.value
+          }
+      });
+      console.log(this.state.form);
+    }
+  
+
+
 
 
   /* const [values, setValue] = useState({
@@ -54,6 +75,7 @@ export default function Login() {
               name = "username" 
               type="text" 
               placeholder='ingresa tu Usuario'
+              onChange={this.handleChange}
               /* value = {values.username} */ 
               /* onChange = {handleChange} */
               {...register("username", { required: true, maxLength: 10 })}
@@ -71,6 +93,7 @@ export default function Login() {
               id = "password" 
               name = "password" 
               type="password" 
+              onChange={this.handleChange}
               placeholder='ingresa tu contraseña' 
               /* value = {values.password} 
               onChange = {handleChange} */

@@ -11,7 +11,7 @@ const ActualizarOrden = ()=>{
 
     useEffect(()=>{
       axios
-      .get("https://instaya-backend-production.up.railway.app/orden/" + id)
+      .get("http://localhost:3001/orden/" + id)
       .then(response => {
         console.log(response.data)
         const fecha = response.data.fecha

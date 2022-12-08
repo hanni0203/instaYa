@@ -14,16 +14,25 @@ const labels = [
 const  Misordenes = () => {
 
     const [ordenes, setOrdenes] = useState(null)
-   
+    const [crea, setpost] = useState(false)
     useEffect(()=>{
-        const userId = "638c034c72354a46ce9f1df6"
-        axios.get('https://instaya-backend-production.up.railway.app/orden?userId=' + userId)
+        const userId = '638c034c72354a46ce9f1df6'
+        axios
+        .get('http://localhost:3001/orden?userId=' + userId)
             .then((response) =>{
                 console.log(response.data.data)
                 setOrdenes(response.data.data)
         })
     },[]);
 
+    const postClick = (bookId) => {
+        axios
+            .post('http://localhost:3001/orden/create' + ordenId)
+            .then(response => {
+                console.log(response.data)
+                setpost()
+            })
+    }
 
     return (
 
@@ -57,6 +66,10 @@ const  Misordenes = () => {
                                     <td>{orden.ciudadReceptor}</td>
                                     <td>{orden.direccioReceptor}</td>
                                     <td className='text-success'>{orden.estado}</td>
+                                    <td >
+                                    <Link className="btn btn-primary books-home__create" to={'/IngresaOrden/'+'create'}>Create</Link>
+                                    </td>
+
                                 </tr>
                             )
                         }) : ''}
