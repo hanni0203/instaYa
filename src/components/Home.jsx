@@ -13,7 +13,7 @@ export default function Home() {
 
       <div className='contac'>
         <div className="item">
-          <Link to="/register">
+          <Link to="/registro">
             <img  src="src/assets/img/pc1.png" alt=" imagen logo" />
             <h4>Regístrate</h4>
           </Link>

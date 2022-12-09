@@ -168,7 +168,7 @@ const Orden=({data, idOrden})=> {
                   <label htmlFor="fecha">Fecha:</label>
                   <input
                         type="date"
-                        {...register("fecha", { required: true })}
+                        {...register("fecha", { required: false })}
                         aria-invalid={errors.fecha ? "true" : "false"}
                     />
                   

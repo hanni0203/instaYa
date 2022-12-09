@@ -2,24 +2,41 @@ import React from 'react'
 import '../assets/css/formularioregistro.css'
 
 import {useForm} from 'react-hook-form'
+import axios from 'axios'
 
-export default function Registro() {
-  
-/*    const { register, formState: { errors }, handleSubmit } = useForm();
-  const customSubmit = (data) => { console.log('login data', data) }  */
-
-    
+const Registro = () => {
   const { register, formState: { errors }, handleSubmit } = useForm();
+
+  /* const { register, formState: { errors }, handleSubmit } = useForm();
   const customSubmit = (data) => {
       axios
-          .post("http://localhost:3001/orden/", data)
+          .post("http://localhost:5000/orden/", data)
           .then(response => {
               if (response.status === '200') {
                   alert('Success!')
               }
           })
       console.log('register data', data)
-  } 
+  }  */
+
+/* const customSubmit = (data) => { console.log('login data', data) } */ 
+
+  const customSubmit = (dataForm) => { 
+
+    const userObject = {
+      name: dataForm.nombrecompleto,
+      tipocc: dataForm.tipo ,
+      numeroTipo: dataForm.identificacion,
+      telefono: dataForm.telefonocontacto,
+      email: dataForm.correoelectronico,
+      username: dataForm.username,
+      password: dataForm.password,
+    }
+
+    axios
+      .post("http://localhost:5000/user/", userObject)
+      .then(response => console.log(response.data.data))
+  }
 
   return (
     <div>
@@ -33,7 +50,7 @@ export default function Registro() {
           <label>Nombre completo</label>
           <input type= 'text'  
             {...register("nombrecompleto", { required: true, maxLength: 40 })}
-            aria-onInvalid={errors.nombrecompleto ? "true" : "falso"}
+            aria-onInvalid={errors.nombrecompleto ? "true" : "false"}
             />
            
             
@@ -42,8 +59,8 @@ export default function Registro() {
           <div>
             <label for="lang">CC/NIT:</label>
             <select name="Identificacion" id="lang"
-              {...register("CCNIT", { required: true,})}
-              aria-onInvalid={errors.CCNIT ? "true" : "false"}>
+              {...register("tipo", { required: true,})}
+              aria-onInvalid={errors.tipo ? "true" : "false"}>
               
 
             <option value="Selecciona">Selecciona:</option>
@@ -80,24 +97,24 @@ export default function Registro() {
             <div className='groupusu'>
               <div className='contraseniainput'><label htmlFor="">Crea Tu Usuario</label></div>
               <div className='contraseniainput'><input type="text"             
-              {...register("creatuusuario", { required: true, maxLength: 10 })}
-                  aria-onInvalid={errors.creatuusuario ? "true" : "falso"}/>
+              {...register("username", { required: true, maxLength: 10 })}
+                  aria-onInvalid={errors.username ? "true" : "falso"}/>
                  
               </div>
             </div>
             <div className='groupusu'>
               <div className='contraseniainput'><label htmlFor="">Crea Tu Contraseña</label></div>
               <div className='contraseniainput'><input type="password" 
-               {...register("creatucontrasena", { required: true, maxLength: 20})}
-                  aria-onInvalid={errors.creatucontrasena ? "true" : "falso"}/>
+               {...register("password", { required: true, maxLength: 20})}
+                  aria-onInvalid={errors.password ? "true" : "falso"}/>
                  
                </div>
             </div>
             <div className='groupusu'>
               <div className='contraseniainput'><label htmlFor="">Confirma tu Contraseña</label></div>
               <div className='contraseniainput'><input type="password" 
-                {...register("confirmatucontrasena", { required: true, maxLength: 20 })}
-                 aria-onInvalid={errors.confirmatucontrasena ? "true" : "falso"}/>
+                {...register("password2", { required: true, maxLength: 20 })}
+                 aria-onInvalid={errors.password2 ? "true" : "falso"}/>
                 
                </div>
             </div>            
@@ -119,3 +136,4 @@ export default function Registro() {
     </div>
   )
 }
+export default Registro
