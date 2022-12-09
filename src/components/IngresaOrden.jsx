@@ -54,7 +54,7 @@ const IngresaOrden = ()=>{
       <div>
         <div className='tituloIngresaOrden'>
             <div><h1>Ingresa tu orden</h1></div>
-            <div><img src="../assets/img/IngresaOrden.png" alt="" align= "right"/></div>
+            <div><img src='../assets/img/IngresaOrden.png' alt="" align= "right"/></div>
         </div>  
         <br/>
         <form className='ingresaOrden' onSubmit={handleSubmit(customSubmit)}>
@@ -107,8 +107,8 @@ const IngresaOrden = ()=>{
                   >
                     
                   <option value="Selecciona">Selecciona:</option>
-                  <option value="1">Bogota</option>
-                  <option value="2">Barranquilla</option>
+                  <option value="Bogota">Bogota</option>
+                  <option value="Barranquilla">Barranquilla</option>
                   </select>
                 </div>
                 <div className='div2'>
@@ -277,14 +277,14 @@ const IngresaOrden = ()=>{
               <div className='info'>
                 <div className='div1'>
                   <label htmlFor="ciudadReceptor">Ciudad:</label>
-                  <select name="Ciudad" id="lang"
+                  <select name="ciudadReceptor" id="lang"
                     {...register("ciudadReceptor", { required: true,})}
                     aria-invalid={errors.ciudadReceptor ? "true" : "false"}
                   >
     
-                  <option value="Selecciona">Selecciona:</option>
-                  <option value="1">Bogota</option>
-                  <option value="2">Barranquilla</option>
+                  <option value="S1elecciona">Selecciona:</option>
+                  <option value="Bogota">Bogota</option>
+                  <option value="Barranquilla">Barranquilla</option>
                   </select>
                 </div>
                 <div className='div2'>

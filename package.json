@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "axios": "^1.2.1",
-    "bootstrap": "^5.2.2",
+    "bootstrap": "^5.2.3",
     "date-format": "^4.0.14",
     "dateformat": "^5.0.3",
     "gh-pages": "^4.0.0",
@@ -32,5 +32,4 @@
     "vite": "^3.2.3",
     "vite-plugin-babel": "^1.1.2"
   }
-  
 }

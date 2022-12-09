@@ -150,8 +150,8 @@ const Orden=({data, idOrden})=> {
                   >
                     
                   <option value="Selecciona">Selecciona:</option>
-                  <option value="1">Bogota</option>
-                  <option value="2">Barranquilla</option>
+                  <option value="Bogota">Bogota</option>
+                  <option value="Barranquilla">Barranquilla</option>
                   </select>
                 </div>
                 <div className='div2'>
@@ -320,14 +320,14 @@ const Orden=({data, idOrden})=> {
               <div className='info'>
                 <div className='div1'>
                   <label htmlFor="ciudadReceptor">Ciudad:</label>
-                  <select name="Ciudad" id="lang"
+                  <select name="ciudadReceptor" id="lang"
                     {...register("ciudadReceptor", { required: true,})}
                     aria-invalid={errors.ciudadReceptor ? "true" : "false"}
                   >
     
                   <option value="Selecciona">Selecciona:</option>
-                  <option value="1">Bogota</option>
-                  <option value="2">Barranquilla</option>
+                  <option value="Bogota">Bogota</option>
+                  <option value="Barranquilla">Barranquilla</option>
                   </select>
                 </div>
                 <div className='div2'>
