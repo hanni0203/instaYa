@@ -35,19 +35,20 @@ const Orden=({data, idOrden})=> {
           direccioReceptor: dataForm.direccionrecogida,
           ciudadReceptor: dataForm.ciudadReceptor,
           telefonoReceptor: dataForm.telefonoReceptor,
-          userId: "638c034c72354a46ce9f1df6",
+          userId: "638ad1e4f31b537d0b8a6097",
+        
 
         }
         if(isEdit){
           axios
-            .put('http://localhost:3001/orden/edit/' + idOrden, ordenObject )
+            .put('http://localhost:5000/orden/edit/' + idOrden, ordenObject )
             .then(response =>{console.log(response.data.data)
             })
           
         }else{
           axios
-            .post("http://localhost:3001/orden/", ordenObject)
-            .then(response => console.log(response.data))
+            .post("http://localhost:5000/orden/", ordenObject)
+            .then(response => console.log(response.data.data))
         }
         console.log('datos formulario', data.data) 
   
@@ -56,7 +57,7 @@ const Orden=({data, idOrden})=> {
 
     useEffect(()=>{
       console.log(data.data)
-      if (data.length !== 0){
+      if (data.data.length !== 0){
         setisEdit(true)
         //Datos input y datos api
         // emisor  
@@ -82,7 +83,7 @@ const Orden=({data, idOrden})=> {
         setValue('direccionrecogida', data.data.direccioReceptor)
         setValue('ciudadReceptor', data.data.ciudadReceptor)
         setValue('telefonoReceptor', data.data.telefonoReceptor)
-        setValue('estado', data.data.estado)
+        
           
 
       }
