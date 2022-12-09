@@ -1,5 +1,5 @@
 import '../assets/css/ingresaOrden.css'
-import Orden from './orden'
+import Orden from './Orden'
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
 

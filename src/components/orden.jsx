@@ -18,7 +18,7 @@ const Orden=({data, idOrden})=> {
           direccionEmisor: dataForm.direccionrecogida,
           ciudadEmisor: dataForm.ciudad,
           telefonoEmisor: dataForm.telefono,
-          fecha: dataForm.fecha,
+          fechaEmisor: dataForm.fecha,
           horaEmisor: dataForm.hora,
     
           tipoEmcomienda: dataForm.tipodeencomienda,
@@ -34,18 +34,19 @@ const Orden=({data, idOrden})=> {
           direccioReceptor: dataForm.direccionrecogida,
           ciudadReceptor: dataForm.ciudadReceptor,
           telefonoReceptor: dataForm.telefonoReceptor,
-          userId: "638c034c72354a46ce9f1df6",
+          userId: "638ad1e4f31b537d0b8a6097",
+          estado: "Guardado"
 
         }
         if(isEdit){
             axios
-              .put('https://instaya-backend-production.up.railway.app/Orden/edit' + idOrden, ordenObject )
+              .put('http://localhost:5000/orden/edit' + idOrden, ordenObject )
               .then(response =>{console.log(response.data.data)
               })
             
           }else{
             axios
-              .post("https://instaya-backend-production.up.railway.app/Orden/", ordenObject)
+              .post("http://localhost:5000/orden", ordenObject)
               .then(response => console.log(response.data.data))
           }
           console.log('datos formulario', data.data) 

@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import Orden from "./orden.jsx"
+import Orden from "./Orden.jsx"
 import { useState, useEffect } from "react" 
 import axios from 'axios'
 import dateFormat from "dateformat"

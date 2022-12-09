@@ -1,7 +1,9 @@
-FROM node:lts-alpine
-WORKDIR /app
-COPY package.json .
+FROM node:19-alpine
+WORKDIR /srv/www/app
+COPY package*.json ./
 RUN npm install
 COPY . .
-ENV PORT $PORT
-CMD ["npm", "run",  "start"]
+EXPOSE 3001
+COPY . .
+ADD src /srv/www/app
+ADD public /srv/www/app
