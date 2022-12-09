@@ -57,7 +57,7 @@ const Orden=({data, idOrden})=> {
 
     useEffect(()=>{
       console.log(data.data)
-      if (data.length !== 0){
+      if (data.data.length !== 0){
         setisEdit(true)
         //Datos input y datos api
         // emisor  
