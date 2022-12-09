@@ -58,7 +58,7 @@ const  Misordenes = () => {
                                     <td>{orden.direccioReceptor}</td>
                                     <td className='text-success'>{orden.estado}</td>
                                     <td >
-                                    <Link className="btn btn-primary books-home__create" to={'/IngresaOrden/'+'create'}>Create</Link>
+                                    <Link className="btn btn-primary books-home__create" to={'/actualizarOrden/'+orden._id+'/edit'}>Cancelar orden</Link>
                                     </td>
 
                                 </tr>

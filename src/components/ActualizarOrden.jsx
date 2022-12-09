@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import Orden from "./orden.jsx"
+import Orden from "./Orden.jsx"
 import { useState, useEffect } from "react" 
 import axios from 'axios'
 import dateFormat from "dateformat"
@@ -11,7 +11,7 @@ const ActualizarOrden = ()=>{
 
     useEffect(()=>{
       axios
-      .get("http://localhost:3001/orden/" + id)
+      .get("http://localhost:5000/orden/" + id)
       .then(response => {
         console.log(response.data.data)
         const fecha = response.data.data.fechaEmisor

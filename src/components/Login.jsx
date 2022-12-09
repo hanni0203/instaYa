@@ -6,10 +6,10 @@ import axios from 'axios'
 
 export default function Login() {
 
-/*   const { register, formState: { errors }, handleSubmit } = useForm();
-  const customSubmit = (data) =>{ console.log(data)}  */
+  const { register, formState: { errors }, handleSubmit } = useForm();
+  const customSubmit = (data) =>{ console.log(data)} 
 
-  const navigate = useNavigate();
+  /* const navigate = useNavigate();
   const { register, formState: { errors }, handleSubmit, setValue } = useForm();
   const customSubmit = (data) => {
       axios
@@ -23,7 +23,7 @@ export default function Login() {
                   setValue('password', '')
               }
           })
-  } 
+  }  */
 
   return (
 

@@ -13,12 +13,12 @@ export default function Home() {
 
       <div className='contac'>
         <div className="item">
-          <Link to="/register">
+          <Link to="/registro">
             <img  src="src/assets/img/pc1.png" alt=" imagen logo" />
             <h4>Regístrate</h4>
           </Link>
         </div>
-        <Link to="/IngresaOrden">
+        <Link to="/IngresaOrden/create">
           <div className="item">
             <img src="src/assets/img/carro2.png" alt=" imagen logo" />
             <h4>Ingresa una Orden</h4>
