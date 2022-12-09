@@ -1,7 +1,6 @@
 FROM node:lts-alpine
-WORKDIR /app
+WORKDIR /ddd/app
 COPY package.json .
 RUN npm install
 COPY . .
-ENV PORT $PORT
-CMD ["npm", "run",  "start"]
+CMD ["npm", "run",  "dev"]

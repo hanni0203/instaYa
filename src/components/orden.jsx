@@ -355,5 +355,4 @@ const Orden=({data, idOrden})=> {
     </div>
   )
 }
-
 export default Orden
