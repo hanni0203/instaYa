@@ -5,12 +5,21 @@ import {useForm} from 'react-hook-form'
 
 export default function Registro() {
   
+/*    const { register, formState: { errors }, handleSubmit } = useForm();
+  const customSubmit = (data) => { console.log('login data', data) }  */
+
+    
   const { register, formState: { errors }, handleSubmit } = useForm();
-  const customSubmit = (data) => { console.log('login data', data) }
-
-
-
-
+  const customSubmit = (data) => {
+      axios
+          .post("http://localhost:3001/orden/", data)
+          .then(response => {
+              if (response.status === '200') {
+                  alert('Success!')
+              }
+          })
+      console.log('register data', data)
+  } 
 
   return (
     <div>

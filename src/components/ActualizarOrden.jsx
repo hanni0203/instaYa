@@ -13,9 +13,9 @@ const ActualizarOrden = ()=>{
       axios
       .get("http://localhost:3001/orden/" + id)
       .then(response => {
-        console.log(response.data)
-        const fecha = response.data.fecha
-        response.data.fecha = dateFormat(fecha, "yyyy-mm-dd")
+        console.log(response.data.data)
+        const fecha = response.data.data.fechaEmisor
+        response.data.fechaEmisor = dateFormat(fecha, "yyyy-mm-dd")
         setOrden(response.data)
     })
 }, [])

@@ -25,15 +25,6 @@ const  Misordenes = () => {
         })
     },[]);
 
-    const postClick = (bookId) => {
-        axios
-            .post('http://localhost:3001/orden/create' + ordenId)
-            .then(response => {
-                console.log(response.data)
-                setpost()
-            })
-    }
-
     return (
 
         <div className='principal'>
@@ -62,7 +53,7 @@ const  Misordenes = () => {
                             return(
                                 <tr key = {index}>
                                     <td scope="row"><Link to={'/actualizarOrden/'+orden._id+'/edit'}>{index}</Link></td>
-                                    <td>{orden.fecha}</td>
+                                    <td>{orden.fechaEmisor }</td>
                                     <td>{orden.ciudadReceptor}</td>
                                     <td>{orden.direccioReceptor}</td>
                                     <td className='text-success'>{orden.estado}</td>

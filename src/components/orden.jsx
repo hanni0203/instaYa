@@ -46,8 +46,8 @@ const Orden=({data, idOrden})=> {
           
         }else{
           axios
-            .post("http://localhost:3001/orden/create/", ordenObject)
-            .then(response => console.log(response.data.data))
+            .post("http://localhost:3001/orden/", ordenObject)
+            .then(response => console.log(response.data))
         }
         console.log('datos formulario', data.data) 
   
@@ -55,8 +55,8 @@ const Orden=({data, idOrden})=> {
     const [isEdit, setisEdit] = useState(false)
 
     useEffect(()=>{
-      //console.log(data.data)
-      if (data.data.length !== 0){
+      console.log(data.data)
+      if (data.length !== 0){
         setisEdit(true)
         //Datos input y datos api
         // emisor  
@@ -86,7 +86,7 @@ const Orden=({data, idOrden})=> {
           
 
       }
-    },[])
+    },[data.data])
    
 
   return (
