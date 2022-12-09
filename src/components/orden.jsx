@@ -5,10 +5,14 @@ import axios from 'axios'
 
 const Orden=({data, idOrden})=> {
 
+  const [isEdit, setisEdit] = useState(false)
+
+
   const { register, formState: { errors }, handleSubmit, setValue } = useForm();
 
   const customSubmit = (dataForm) => { 
         console.log(dataForm)
+
         const ordenObject = {
           // datos api y datos input 
           
@@ -19,7 +23,7 @@ const Orden=({data, idOrden})=> {
           direccionEmisor: dataForm.direccionrecogida,
           ciudadEmisor: dataForm.ciudad,
           telefonoEmisor: dataForm.telefono,
-          fechaEmisor: dataForm.fecha,
+          /* fechaEmisor: dataForm.fecha, */
           horaEmisor: dataForm.hora,
     
           tipoEmcomienda: dataForm.tipodeencomienda,
@@ -36,7 +40,7 @@ const Orden=({data, idOrden})=> {
           ciudadReceptor: dataForm.ciudadReceptor,
           telefonoReceptor: dataForm.telefonoReceptor,
           userId: "638ad1e4f31b537d0b8a6097",
-          estado: "Guardado"
+          /* estado: "Guardado" */
 
         }
         if(isEdit){
@@ -48,15 +52,14 @@ const Orden=({data, idOrden})=> {
         }else{
           axios
             .post("http://localhost:5000/orden/", ordenObject)
-            .then(response => console.log(response.data))
+            .then(response => console.log(response.data.data))
         }
-        console.log('datos formulario', data.data) 
+        /* console.log('datos formulario', data.data) */ 
   
       }
-    const [isEdit, setisEdit] = useState(false)
 
     useEffect(()=>{
-      console.log(data.data)
+      console.log('esta es la data', data.data)
       if (data.data.length !== 0){
         setisEdit(true)
         //Datos input y datos api
@@ -67,7 +70,7 @@ const Orden=({data, idOrden})=> {
         setValue('direccionrecogida', data.data.direccionEmisor)
         setValue('ciudad',data.data.ciudadEmisor)
         setValue('telefono',data.data.telefonoEmisor)
-        setValue('fecha', data.data.fechaEmisor)
+        /* setValue('fecha', data.data.fechaEmisor) */
         setValue('hora', data.data.horaEmisor)
           //encomienta 
         setValue('tipodeencomienda', data.data.tipoEmcomienda)
@@ -83,18 +86,18 @@ const Orden=({data, idOrden})=> {
         setValue('direccionrecogida', data.data.direccioReceptor)
         setValue('ciudadReceptor', data.data.ciudadReceptor)
         setValue('telefonoReceptor', data.data.telefonoReceptor)
-        setValue('estado', data.data.estado)
+        //setValue('estado', data.data.estado)
           
 
       }
-    },[data.data])
+    },[/* data.data */])
    
 
   return (
     <div>
         <div className='tituloIngresaOrden'>
             <div><h1>Ingresa tu orden</h1></div>
-            <div><img src="src/assets/img/IngresaOrden.png" alt="" align= "right"/></div>
+            <div><img src="../assets/img/IngresaOrden.png" alt="" align= "right"/></div>
         </div>  
         <br/>
         <form className='ingresaOrden' onSubmit={handleSubmit(customSubmit)}>
@@ -338,7 +341,7 @@ const Orden=({data, idOrden})=> {
               </div>
 
               <div className='btn-container'>
-                <button className='btn' type='submit'>{isEdit ? "Cancelar Orden" : "Crear Orden"}</button>
+                <input className='btn' type='submit' value={isEdit ? 'Cancelar Orden' : 'Crear Orden'}/>
               </div>
             </div>
             
@@ -346,7 +349,7 @@ const Orden=({data, idOrden})=> {
         <div className='rastreo'>
           <div className='circle'>
             <div className='circleinput'>
-              <img className='imgcheck' src="src/assets/img/check.png" alt="" align= "center"/>
+              <img className='imgcheck' src="../assets/img/check.png" alt="" align= "center"/>
               <input type="text" />
               <h4 className='titulos'>Código de rastreo</h4>
             </div>
