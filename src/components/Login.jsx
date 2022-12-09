@@ -2,41 +2,28 @@
 import '../assets/css/login.css'
 import {useForm} from 'react-hook-form'
 import { useState } from 'react'
+import axios from 'axios'
 
 export default function Login() {
 
-  const { register, formState: { errors }, handleSubmit } = useForm();
-  const customSubmit = (data) =>{ console.log(data)}
+/*   const { register, formState: { errors }, handleSubmit } = useForm();
+  const customSubmit = (data) =>{ console.log(data)}  */
 
-
-  /* const [values, setValue] = useState({
-    username: '',
-    password:''
-  }) */
-
-  /* const handleSubmit = (event) => {
-    console.log(event)
-    event.preventDefault()
-    
-    console.log('submit', values)
-  } */
-
-  /* const handleChange = (event) => {
-    //console.log(event)
-    const {target} = event
-    console.log('target', target)
-    const {name, value} = target
-    console.log('name, value:', name, value)
-
-    const newValues = {
-        ...values,
-        [name]: value
-    }
-
-    console.log('estos son los datos', newValues)
-
-    setValue(newValues)
-  } */
+  const navigate = useNavigate();
+  const { register, formState: { errors }, handleSubmit, setValue } = useForm();
+  const customSubmit = (data) => {
+      axios
+          .post("http://localhost:3001/User", data)
+          .then(response => {
+              if (response.data.length != 0) {
+                  localStorage.setItem('user_id', response.data[0]._id)
+                  navigate("/books")
+              } else {
+                  alert('Invalid input data. Please, try again')
+                  setValue('password', '')
+              }
+          })
+  } 
 
   return (
 
@@ -54,6 +41,7 @@ export default function Login() {
               name = "username" 
               type="text" 
               placeholder='ingresa tu Usuario'
+              //onChange={this.handleChange}
               /* value = {values.username} */ 
               /* onChange = {handleChange} */
               {...register("username", { required: true, maxLength: 10 })}
@@ -71,6 +59,7 @@ export default function Login() {
               id = "password" 
               name = "password" 
               type="password" 
+              //onChange={this.handleChange}
               placeholder='ingresa tu contraseña' 
               /* value = {values.password} 
               onChange = {handleChange} */

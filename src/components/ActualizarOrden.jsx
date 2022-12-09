@@ -11,13 +11,13 @@ const ActualizarOrden = ()=>{
 
     useEffect(()=>{
       axios
-      .get("https://instaya-backend-production.up.railway.app/orden/" + id)
+      .get("http://localhost:3001/orden/" + id)
       .then(response => {
-          console.log(response.data)
-          const fecha = response.data.fecha
-          response.data.fecha = dateFormat(fecha, "yyyy-mm-dd")
-          setOrden(response.data)
-      })
+        console.log(response.data.data)
+        const fecha = response.data.data.fechaEmisor
+        response.data.fechaEmisor = dateFormat(fecha, "yyyy-mm-dd")
+        setOrden(response.data)
+    })
 }, [])
 
     return(

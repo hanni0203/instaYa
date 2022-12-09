@@ -8,6 +8,7 @@ const Orden=({data, idOrden})=> {
   const { register, formState: { errors }, handleSubmit, setValue } = useForm();
 
   const customSubmit = (dataForm) => { 
+        console.log(dataForm)
         const ordenObject = {
           // datos api y datos input 
           
@@ -39,24 +40,24 @@ const Orden=({data, idOrden})=> {
 
         }
         if(isEdit){
-            axios
-              .put('http://localhost:5000/orden/edit' + idOrden, ordenObject )
-              .then(response =>{console.log(response.data.data)
-              })
-            
-          }else{
-            axios
-              .post("http://localhost:5000/orden", ordenObject)
-              .then(response => console.log(response.data.data))
-          }
-          console.log('datos formulario', data.data) 
-    }
-
+          axios
+            .put('http://localhost:5000/orden/edit/' + idOrden, ordenObject )
+            .then(response =>{console.log(response.data.data)
+            })
+          
+        }else{
+          axios
+            .post("http://localhost:5000/orden/", ordenObject)
+            .then(response => console.log(response.data))
+        }
+        console.log('datos formulario', data.data) 
+  
+      }
     const [isEdit, setisEdit] = useState(false)
 
     useEffect(()=>{
       console.log(data.data)
-      if(data.data.length !== 0){
+      if (data.length !== 0){
         setisEdit(true)
         //Datos input y datos api
         // emisor  
@@ -66,9 +67,8 @@ const Orden=({data, idOrden})=> {
         setValue('direccionrecogida', data.data.direccionEmisor)
         setValue('ciudad',data.data.ciudadEmisor)
         setValue('telefono',data.data.telefonoEmisor)
-        setValue('hora', data.data.horaEmisor)
         setValue('fecha', data.data.fechaEmisor)
-       
+        setValue('hora', data.data.horaEmisor)
           //encomienta 
         setValue('tipodeencomienda', data.data.tipoEmcomienda)
         setValue('cantidad', data.data.cantidadEmcomienda)
@@ -86,8 +86,9 @@ const Orden=({data, idOrden})=> {
         setValue('estado', data.data.estado)
           
 
-        }
-      }) 
+      }
+    },[data.data])
+   
 
   return (
     <div>
@@ -110,7 +111,7 @@ const Orden=({data, idOrden})=> {
               <div className='info'>
                 <div className='div1'>
                   <label htmlFor="tipo">CC/NIT:</label>
-                  <select name="Identificacion" id="lang" 
+                  <select select name="Identificacion" id="lang"
                       {...register("tipo", { required: true })}
                       aria-invalid={errors.tipo ? "true" : "false"}
                     >

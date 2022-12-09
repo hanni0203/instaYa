@@ -11,10 +11,11 @@ import Orden from './components/Orden'
 import ActualizarOrden from './components/ActualizarOrden'
 import Misordenes from './components/Misordenes'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// ************ Set the server to listen ************
 
 
 function App() {
-  /* const [count, setCount] = useState(0) */
+
 
   return (
     <div className='instaYa'>
@@ -24,11 +25,11 @@ function App() {
             <Route path="/" element={<Home />} />  
             <Route path="/login" element={<Login />} />  
             <Route path="/register" element={<Registro />} />
-            <Route path="/IngresaOrden" element={<IngresaOrden />} />
+            <Route path="/IngresaOrden/create" element={<IngresaOrden />} />
 
-            <Route path="/actualizarOrden/:id/edit" element={<ActualizarOrden />} />  
-
-            <Route path="/misOrdenes" element={<Misordenes />} /> 
+            <Route path="/ActualizarOrden/:id/edit" element={<ActualizarOrden />} />  
+          
+            <Route path="/misordenes" element={<Misordenes />} /> 
               
           </Routes>
         <Footer/>
@@ -36,5 +37,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App

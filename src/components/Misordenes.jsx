@@ -14,16 +14,16 @@ const labels = [
 const  Misordenes = () => {
 
     const [ordenes, setOrdenes] = useState(null)
+    const [crea, setpost] = useState(false)
     useEffect(()=>{
-        const userId = "638ad1e4f31b537d0b8a6097"
-        axios.get('http://localhost:5000/orden?userId=' + userId)
+        const userId = '638c034c72354a46ce9f1df6'
+        axios
+        .get('http://localhost:5000/orden?userId=' + userId)
             .then((response) =>{
                 console.log(response.data.data)
                 setOrdenes(response.data.data)
         })
-    }, [])
-
-
+    },[]);
 
     return (
 
@@ -53,10 +53,14 @@ const  Misordenes = () => {
                             return(
                                 <tr key = {index}>
                                     <td scope="row"><Link to={'/actualizarOrden/'+orden._id+'/edit'}>{index}</Link></td>
-                                    <td>{orden.fechaEmisor}</td>
+                                    <td>{orden.fechaEmisor }</td>
                                     <td>{orden.ciudadReceptor}</td>
                                     <td>{orden.direccioReceptor}</td>
                                     <td className='text-success'>{orden.estado}</td>
+                                    <td >
+                                    <Link className="btn btn-primary books-home__create" to={'/IngresaOrden/'+'create'}>Create</Link>
+                                    </td>
+
                                 </tr>
                             )
                         }) : ''}
